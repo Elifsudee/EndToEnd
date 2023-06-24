@@ -9,14 +9,15 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty", //raporların daha okunaklı olması için
-                "html:target/default-cucumber-reports07.html",
+                "html:src/test/resources/htmlReport/deneme.html",
                 "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"
+                "junit:target/xml-report/cucumber.xml",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        monochrome = true, //raporları consolda daha okunaklı olması için
+        monochrome = false, //raporları consolda daha okunaklı olması için
         features = "src/test/resources",
-        glue = {"stepdefinitions", "hooks"},
-        tags = "",
+        glue = {"stepDefinitions", "hooks"},
+        tags = "@elif",
         dryRun = false
 
 )

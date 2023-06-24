@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="19.524" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Vice Dean ders programi olusturabilmelidir" name="Vice Dean desr programi olusturur" time="19.32">
+<system-out><![CDATA[
+Given kullanici "https://managementonschools.com/" sayfasina gider..........passed
+When kullanici anasayfa login bolumune tiklar...............................passed
+And kullanici vice dean hesabi login icin User Name alanina kullanici adi girer.passed
+And kullanici vice dean hesabi icin Password alanina password girer.........passed
+Then kullanici login butonuna tiklar........................................passed
+And kullanici menu secenegine tiklar........................................passed
+And kullanici Lesson Management secenegine tiklar...........................passed
+And kullanici Lesson Program secenegine tiklar..............................passed
+And kullanici Choose Lessons listesinde ders secer..........................passed
+And kullanici Choose Education Term bolumunden donem secer..................passed
+And kullanici Choose Day listesinden gun secer..............................passed
+And kullanici Start Time secebilmelidir.....................................passed
+And kullanici Stop Time secebilmelidir......................................passed
+And Lesson Program bolumundeki submit butonuna tiklar.......................passed
+And kullanici Created Lesson Program yazisini gorur.........................passed
+And kullanici sayfayi kapatir...............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

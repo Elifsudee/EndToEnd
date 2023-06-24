@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         features="src/test/resources",
-        glue= {"stepdefinitions","hooks"},
-        tags= "@api",//Çalışacak scenarioları belirtir.
+        glue= {"stepdefinitions","hooksElif"},
+        tags="",//Çalışacak scenarioları belirtir.
         dryRun= false
 )
 

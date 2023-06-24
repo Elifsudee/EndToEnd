@@ -1,3 +1,4 @@
+
 Feature: Vice Dean ders listesini gorebilmeli ve guncelleyebilmelidir
 
   Scenario:
@@ -13,3 +14,4 @@ Feature: Vice Dean ders listesini gorebilmeli ve guncelleyebilmelidir
     And kullanici Lesson Program List`te Lesson,Day,Start Time ve Stop Time gorur
     And kullanici Lesson Program List`ten guncelleme yapar
     And kullanici Lesson Program List`ten silme yapar
+    And kullanici sayfayi kapatir

@@ -1,3 +1,4 @@
+
 Feature: Vice Dean ogretmen atayabilmeli
 
   Background:Add Lesson Program
@@ -23,3 +24,4 @@ Feature: Vice Dean ogretmen atayabilmeli
       And kullanici Choose Teacher bolumunden ogretmen secer
       And kullanici Lesson Program Assignment `taki submit secenegine tiklar
       And kullanici teacher assignment ettigini dogrular
+      And kullanici sayfayi kapatir

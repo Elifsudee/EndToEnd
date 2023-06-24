@@ -1,6 +1,4 @@
-@elif
-Feature: Vice Dean ders programi olusturabilmelidir
-
+Feature:Vice Dean Add Lesson Program
   Background: ManagementonSchool_login
     Given kullanici "https://managementonschools.com/" sayfasina gider
     When kullanici anasayfa login bolumune tiklar
@@ -12,13 +10,12 @@ Feature: Vice Dean ders programi olusturabilmelidir
     And kullanici Lesson Program secenegine tiklar
 
 
-    Scenario: Vice Dean desr programi olusturur
+  Scenario: Vice Dean gerekli alanlardan birini bos birakir
+
     And kullanici Choose Lessons listesinde ders secer
     And kullanici Choose Education Term bolumunden donem secer
-    And kullanici Choose Day listesinden gun secer
     And kullanici Start Time secebilmelidir
     And kullanici Stop Time secebilmelidir
     And Lesson Program bolumundeki submit butonuna tiklar
-    And kullanici Created Lesson Program yazisini gorur
-      And kullanici sayfayi kapatir
-
+    And kullanici uyari yazini gorur
+    And kullanici sayfayi kapatir

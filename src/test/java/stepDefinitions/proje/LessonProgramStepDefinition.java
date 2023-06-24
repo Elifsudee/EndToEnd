@@ -97,7 +97,7 @@ public class LessonProgramStepDefinition {
     }
 
     @When("Lesson Program bolumundeki submit butonuna tiklar")
-    public void lesson_program_bolumundeki_submit_butonuna_tiklar() throws InterruptedException {
+    public void lesson_program_bolumundeki_submit_butonuna_tiklar() {
 
      ReusableMethods.bekle(3);
         lessonProgramPage.sumbitLesson.click();
@@ -189,7 +189,7 @@ public class LessonProgramStepDefinition {
     public void kullaniciLessonProgramAssignmentTakiSubmitSecenegineTiklar() {
 
         ReusableMethods.bekle(2);
-      //ReusableMethods.click(lessonProgramPage.teacherSubmit);
+      ReusableMethods.click(lessonProgramPage.teacherSubmit);
 
 
     }
@@ -203,19 +203,7 @@ public class LessonProgramStepDefinition {
 
     @Given("kullanici cikan bolumdeki bilgileri doldurur {string},{string},{string},{string},{string}")
     public void kullaniciCikanBolumdekiBilgileriDoldurur(String chooseLesson, String EducationTerm, String day, String startTime, String stopTime) throws InterruptedException {
-        lessonProgramPage.chooseLesson.click();
-        Thread.sleep(3);
-        lessonProgramPage.chooseLesson.sendKeys("Java", Keys.ENTER);
-        select=new Select(lessonProgramPage.chooseEducationTerm);
-        select.selectByValue("3");
-        select=new Select(lessonProgramPage.chooseDay);
-        select.selectByValue("FRIDAY");
-        lessonProgramPage.stopTime.click();
-        Thread.sleep(2);
-        lessonProgramPage.startTime.sendKeys("1000A");
-        lessonProgramPage.stopTime.click();
-        Thread.sleep(2);
-        lessonProgramPage.stopTime.sendKeys("1100A");
+    lessonProgramPage.chooseLesson.sendKeys(chooseLesson,Keys.TAB,EducationTerm,Keys.TAB,day,Keys.TAB,startTime,Keys.TAB,stopTime,Keys.ENTER);
 
 
 
@@ -226,5 +214,10 @@ public class LessonProgramStepDefinition {
         ReusableMethods.visibleWait(lessonProgramPage.alert,15);
         Assert.assertTrue(lessonProgramPage.alert.isDisplayed());
 
+    }
+
+    @And("kullanici sayfayi kapatir")
+    public void kullaniciSayfayiKapatir() {
+        Driver.closeDriver();
     }
 }
