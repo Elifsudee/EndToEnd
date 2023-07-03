@@ -5,8 +5,8 @@ Feature: Vice Dean ders listesini gorebilmeli ve guncelleyebilmelidir
 
     Given kullanici "https://managementonschools.com/" sayfasina gider
     When kullanici anasayfa login bolumune tiklar
-    And kullanici login icin User Name alanina kullanici adi girer
-    And kullanici login icin Password alanina password girer
+    And kullanici vice dean hesabi login icin User Name alanina kullanici adi girer
+    And kullanici vice dean hesabi icin Password alanina password girer
     Then kullanici login butonuna tiklar
     And kullanici menu secenegine tiklar
     And kullanici Lesson Management secenegine tiklar

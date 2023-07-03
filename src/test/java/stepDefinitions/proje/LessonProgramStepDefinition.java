@@ -202,9 +202,17 @@ public class LessonProgramStepDefinition {
     }
 
     @Given("kullanici cikan bolumdeki bilgileri doldurur {string},{string},{string},{string},{string}")
-    public void kullaniciCikanBolumdekiBilgileriDoldurur(String chooseLesson, String EducationTerm, String day, String startTime, String stopTime) throws InterruptedException {
-    lessonProgramPage.chooseLesson.sendKeys(chooseLesson,Keys.TAB,EducationTerm,Keys.TAB,day,Keys.TAB,startTime,Keys.TAB,stopTime,Keys.ENTER);
-
+    public void kullaniciCikanBolumdekiBilgileriDoldurur(String chooseLesson, String EducationTerm, String day, String startTime, String stopTime) {
+    lessonProgramPage.chooseLesson.sendKeys(chooseLesson,Keys.ENTER);
+    ReusableMethods.bekle(2);
+    lessonProgramPage.chooseEducationTerm.sendKeys(EducationTerm);
+        ReusableMethods.bekle(2);
+        lessonProgramPage.chooseDay.sendKeys(day);
+        ReusableMethods.bekle(2);
+        lessonProgramPage.startTime.sendKeys(startTime);
+        ReusableMethods.bekle(4);
+        lessonProgramPage.stopTime.sendKeys(stopTime, Keys.TAB,Keys.ENTER);
+        ReusableMethods.bekle(2);
 
 
     }

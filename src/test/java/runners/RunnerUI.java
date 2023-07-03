@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty", //raporların daha okunaklı olması için
-                "html:src/test/resources/htmlReport/deneme.html",
+                "html:src/test/resources/htmlReport/deneme1.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
